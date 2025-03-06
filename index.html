@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Bliss - Beauty Parlor & Nail Art Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+    .playfair {
+        font-family: 'Playfair Display', serif;
+    }
+    .service-card:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+    }
+    .gallery-img {
+        transition: transform 0.3s ease;
+    }
+    .gallery-img:hover {
+        transform: scale(1.05);
+    }
+</style>
+<body class="bg-[#f5f0eb]">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div>
+                    <h1 class="playfair text-2xl md:text-3xl text-[#2C3E50] font-bold">Skin Bliss</h1>
+                    <p class="text-sm text-[#7f8c8d]">Beauty Parlor & Nail Art Studio</p>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-[#2C3E50] hover:text-[#e74c3c]">Home</a>
+                    <a href="#services" class="text-[#2C3E50] hover:text-[#e74c3c]">Services</a>
+                    <a href="#gallery" class="text-[#2C3E50] hover:text-[#e74c3c]">Gallery</a>
+                    <a href="#booking" class="text-[#2C3E50] hover:text-[#e74c3c]">Book Now</a>
+                    <a href="#contact" class="text-[#2C3E50] hover:text-[#e74c3c]">Contact</a>
+                </div>
+                <button class="md:hidden text-[#2C3E50]" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="flex flex-col space-y-4 px-4 py-6">
+                <a href="#home" class="text-[#2C3E50]">Home</a>
+                <a href="#services" class="text-[#2C3E50]">Services</a>
+                <a href="#gallery" class="text-[#2C3E50]">Gallery</a>
+                <a href="#booking" class="text-[#2C3E50]">Book Now</a>
+                <a href="#contact" class="text-[#2C3E50]">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-r from-[#e8d9f1] to-[#f5e6e8]">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h2 class="playfair text-4xl md:text-6xl text-[#2C3E50] font-bold mb-4">Welcome to Skin Bliss</h2>
+                <p class="text-lg md:text-xl text-[#7f8c8d] mb-8">Experience luxury beauty treatments and nail artistry</p>
+                <a href="#booking" class="bg-[#e74c3c] text-white px-8 py-3 rounded-full hover:bg-[#c0392b] transition duration-300">Book Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="playfair text-3xl md:text-4xl text-center text-[#2C3E50] font-bold mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-[#f9f9f9] p-6 rounded-lg shadow-md">
+                    <i class="bi bi-star text-4xl text-[#e74c3c] mb-4"></i>
+                    <h3 class="text-xl font-semibold text-[#2C3E50] mb-2">Facial Treatments</h3>
+                    <p class="text-[#7f8c8d]">Revitalize your skin with our premium facial services</p>
+                </div>
+                <div class="service-card bg-[#f9f9f9] p-6 rounded-lg shadow-md">
+                    <i class="bi bi-gem text-4xl text-[#e74c3c] mb-4"></i>
+                    <h3 class="text-xl font-semibold text-[#2C3E50] mb-2">Nail Art</h3>
+                    <p class="text-[#7f8c8d]">Creative and elegant nail designs for every occasion</p>
+                </div>
+                <div class="service-card bg-[#f9f9f9] p-6 rounded-lg shadow-md">
+                    <i class="bi bi-heart text-4xl text-[#e74c3c] mb-4"></i>
+                    <h3 class="text-xl font-semibold text-[#2C3E50] mb-2">Body Massage</h3>
+                    <p class="text-[#7f8c8d]">Relaxing massages for ultimate stress relief</p>
+                </div>
+                <div class="service-card bg-[#f9f9f9] p-6 rounded-lg shadow-md">
+                    <i class="bi bi-magic text-4xl text-[#e74c3c] mb-4"></i>
+                    <h3 class="text-xl font-semibold text-[#2C3E50] mb-2">Waxing</h3>
+                    <p class="text-[#7f8c8d]">Professional waxing services for smooth skin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-[#f5f0eb]">
+        <div class="container mx-auto px-4">
+            <h2 class="playfair text-3xl md:text-4xl text-center text-[#2C3E50] font-bold mb-12">Our Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b" alt="Nail Art" class="gallery-img w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881" alt="Facial" class="gallery-img w-full h-64 object-cover rounded-lg shadow-md">
+                <img src="https://images.unsplash.com/photo-1610991447067-f7291bb6d2b8" alt="Massage" class="gallery-img w-full h-64 object-cover rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="playfair text-3xl md:text-4xl text-center text-[#2C3E50] font-bold mb-12">Book an Appointment</h2>
+            <form class="max-w-lg mx-auto" id="bookingForm">
+                <div class="mb-6">
+                    <label class="block text-[#2C3E50] mb-2" for="name">Full Name</label>
+                    <input type="text" id="name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-[#e74c3c]">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-[#2C3E50] mb-2" for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-[#e74c3c]">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-[#2C3E50] mb-2" for="service">Service</label>
+                    <select id="service" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-[#e74c3c]">
+                        <option value="">Select a service</option>
+                        <option value="facial">Facial Treatment</option>
+                        <option value="nailart">Nail Art</option>
+                        <option value="massage">Massage</option>
+                        <option value="waxing">Waxing</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-[#2C3E50] mb-2" for="date">Preferred Date</label>
+                    <input type="date" id="date" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-[#e74c3c]">
+                </div>
+                <button type="submit" class="w-full bg-[#e74c3c] text-white py-3 rounded-lg hover:bg-[#c0392b] transition duration-300">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-[#f5f0eb]">
+        <div class="container mx-auto px-4">
+            <h2 class="playfair text-3xl md:text-4xl text-center text-[#2C3E50] font-bold mb-12">Contact Us</h2>
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-lg mb-6">Get in touch with us for any inquiries or to schedule an appointment</p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <a href="tel:8866421359" class="flex items-center text-[#2C3E50]">
+                        <i class="bi bi-telephone-fill mr-2"></i>
+                        +91 8866421359
+                    </a>
+                    <a href="mailto:contact@skinbliss.com" class="flex items-center text-[#2C3E50]">
+                        <i class="bi bi-envelope-fill mr-2"></i>
+                        contact@skinbliss.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2C3E50] text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 Skin Bliss Beauty Parlor & Nail Art Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your booking! We will contact you shortly to confirm your appointment.');
+            this.reset();
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
